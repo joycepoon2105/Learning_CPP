@@ -10,7 +10,7 @@
 #include <stdio.h>   // for printf() and scanf()
 using namespace std;
 
-int main() {
+int main(int argc, char*argv[]) {
     
     cout << "Just Typing Something" << endl;
     cout << "Here" << endl;
@@ -24,7 +24,7 @@ int main() {
     
     cout << endl; // used to create new line
     cout << "Hello World again" << "!" << endl;
-    cout << endl; // used to create new lineß
+    cout << "\n"; // used to create new line (the old way in C)
     cout << "Hello~~~" << endl;
     // print the two msg in every other lines
     
@@ -36,8 +36,22 @@ int main() {
     printf("%c\n", 'A');          // print Char, must use ' ', not " "
     printf("%s\n", "C++");        // print Str
     
+
+    printf("Without Newline is %d", 10);   // without \n, the output sticks with the next line output
+    printf("With Newline is %d\n", 14);    // with \n
+    printf("It shows in the next line as the upper statement includes the '/n' \n"); // /n is wrong
     
-    cin.get(); // display result
+    
+    // used * after % for undetermined space of printing
+    // * takes the first number as the "space index"
+    printf("%*d\n",1,1);
+    printf("%*d\n",2,1);
+    printf("%*d\n",3,1);
+    printf("%*d\n",4,1);
+    
+    
+    getchar(); // display result by any keyword
+    cin.get(); // display result by enter keyword
     
     
     return 0;
